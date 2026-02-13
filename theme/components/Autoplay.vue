@@ -19,7 +19,7 @@ onSlideEnter(() => {
   setTimeout(() => {
     if (nav.hasNext) {
       nav.next()
-    } {
+    } else {
       nav.goFirst()
     }
   }, props.seconds * 1000)
