@@ -65,7 +65,7 @@ clicksStart: 1
 --- 
 
 <h1>Sei Teil unserer steitigen Verbesserung!</h1>
-<p>Schenk uns eine Minute für <span v-mark="{ at: 0, color: '#cfff00', type: 'underline', strokeWidth: 5 }">Feedback:</span></p>
+<p>Schenk uns eine Minute für <span v-mark="{ at: 1, color: '#cfff00', type: 'underline', strokeWidth: 5 }">Feedback:</span></p>
 
 <img src="/assets/feedback-qr.svg" width="200pt" />
 

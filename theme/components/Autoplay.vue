@@ -15,9 +15,9 @@ const props = defineProps({
 })
 
 onSlideEnter(() => {
-  if (props.enabled === true)
+  if (props.enabled !== true) return;
   setTimeout(() => {
-    if (nav.hasNext) {
+    if (nav.hasNext.value) {
       nav.next()
     } else {
       nav.goFirst()
