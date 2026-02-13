@@ -1,0 +1,21 @@
+@import './fonts.css';
+
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+.slidev-layout h1 {
+    color: #cfff00;
+    font-size: 36pt;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.slidev-layout {
+    background: url("../assets/background.png");
+    background-size: cover;
+}
+
+.slidev-layout .highlighted-text {
+    color: #cfff00;
+}

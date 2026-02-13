@@ -1,0 +1,9 @@
+{
+  "name": "slidev-theme-programmierbar",
+  "slidev": {
+    "colorSchema": "both",
+    "defaults": {
+      "fonts": {}
+    }
+  }
+}
