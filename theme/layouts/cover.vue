@@ -1,13 +1,20 @@
 <script setup lang="ts">
-defineProps({
+import { computed } from 'vue'
+
+const props = defineProps({
   imageUrl: { type: String, default: '' },
 })
 
+const resolvedUrl = computed(() => {
+  if (props.imageUrl.startsWith('/'))
+    return import.meta.env.BASE_URL + props.imageUrl.slice(1)
+  return props.imageUrl
+})
 </script>
 
 <template>
   <div class="slidev-layout w-full h-full">
-    <div class="cover-image" :style="{ backgroundImage: `url(${imageUrl})` }">
+    <div class="cover-image" :style="{ backgroundImage: `url(${resolvedUrl})` }">
       <slot />
     </div>
   </div>
