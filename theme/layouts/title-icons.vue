@@ -1,18 +1,29 @@
 <script setup lang="ts">
-import CustomImage from "../components/CustomImage.vue";
+defineProps({
+  titleVariant: {       // Can be 'podcast' or 'meetup'
+    type: String,
+    default: 'meetup'
+  }
+})
 </script>
 
 <template>
   <div class="slidev-layout default">
     <div class="center">
       <img src="../assets/logo-inline.svg" class="logo" />
-      <CustomImage :src="'/assets/meetup.svg'" />
-      <div class="icons">
+      <img v-if="titleVariant === 'meetup'" src="./../assets/meetup.svg" />
+      <img v-else src="./../assets/podcast.svg" />
+      <div class="icons" v-if="titleVariant === 'meetup'">
         <img src="../assets/logo-talk.svg" />
         <img src="../assets/drinks.svg" />
         <img src="../assets/handshake.svg" />
       </div>
-    <slot />
+      <div class="icons" v-else>
+        <img src="../assets/bits.svg" />
+        <img src="../assets/microphone.svg" />
+        <img src="../assets/play.svg" />
+      </div>
+      <slot />
     </div>
   </div>
 </template>

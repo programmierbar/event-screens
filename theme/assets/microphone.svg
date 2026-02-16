@@ -1,0 +1,13 @@
+<svg width="256" height="256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_133_579)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M114.645 105.859H136.307L134.126 159.479C134.117 159.703 133.933 159.88 133.709 159.88H117.802C117.58 159.88 117.397 159.705 117.385 159.483L114.645 105.859Z" stroke="#CFFF00" stroke-width="7"/>
+<ellipse cx="125.493" cy="81.4296" rx="24.5296" ry="24.4296" stroke="#CFFF00" stroke-width="7"/>
+<path d="M116.025 121.781H134.752" stroke="#CFFF00" stroke-width="7" stroke-linecap="round"/>
+<path d="M125.431 160.379C125.431 160.379 125.083 162.385 126.176 165.771C127.268 169.157 130.812 173.769 137.635 173.768C142.633 173.767 144.61 173.445 147.964 174.498C152.563 175.943 155.999 179.952 156 185.815C156.001 192.604 151.366 196.131 147.964 197.218C144.561 198.305 139.083 197.959 137.327 197.959C136.157 197.959 126.788 197.98 109.221 198.024" stroke="#CFFF00" stroke-width="7" stroke-linecap="round"/>
+</g>
+<defs>
+<clipPath id="clip0_133_579">
+<rect width="256" height="256" fill="white"/>
+</clipPath>
+</defs>
+</svg>
