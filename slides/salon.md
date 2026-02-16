@@ -13,6 +13,15 @@ titleVariant: podcast
 <Logo />
 <Autoplay :seconds="10" :enabled="false" />
 ---
+layout: podcast-feeds
+---
+<Logo />
+<Autoplay :seconds="10" :enabled="false" />
+---
+layout: podcast-covers
+---
+<Autoplay :seconds="10" :enabled="false" />
+---
 src: ./pages/last-events.md
 ---
 THIS CONTENT IS IGNORED
