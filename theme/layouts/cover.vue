@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import {urlResolver} from "../util/urlResolver";
 
 const props = defineProps({
   imageUrl: { type: String, default: '' },
 })
 
 const resolvedUrl = computed(() => {
-  if (props.imageUrl.startsWith('/'))
-    return import.meta.env.BASE_URL + props.imageUrl.slice(1)
-  return props.imageUrl
+  return urlResolver(props.imageUrl)
 })
 </script>
 

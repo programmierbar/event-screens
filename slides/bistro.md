@@ -6,17 +6,20 @@ transition: fade-out
 mdc: true
 
 layout: title
-
---- 
+---
+<!-- FIRST SLIDE CANNOT BE SHARED AND AS TO BE RE-CREATED MANUALLY -->
 <Logo />
 <Autoplay :seconds="10" :enabled="true" />
-
 ---
-layout: cover
-# Props from layout component
-imageUrl: '/assets/meetup-cover.jpg'
---- 
-
-TEST
-<!-- content is set in YAML -->
-<Autoplay :seconds="10" :enabled="true" />
+src: ./pages/shared.md#2-5
+---
+THIS CONTENT IS IGNORED
+---
+layout: last-events
+---
+<Autoplay :seconds="15" :enabled="true" />
+<Logo />
+---
+src: ./pages/shared.md#6-7
+---
+THIS CONTENT IS IGNORED
