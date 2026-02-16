@@ -1,11 +1,12 @@
 <script setup lang="ts">
+import CustomImage from "../components/CustomImage.vue";
 </script>
 
 <template>
   <div class="slidev-layout default">
     <div class="center">
     <h1>Herzlich willkommen!</h1>
-    <img :src="'/assets/meetup.svg'" />
+    <CustomImage :src="'/assets/meetup.svg'" />
     <slot />
     </div>
   </div>
