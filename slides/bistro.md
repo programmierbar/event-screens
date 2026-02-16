@@ -20,6 +20,11 @@ layout: last-events
 <Autoplay :seconds="15" :enabled="true" />
 <Logo />
 ---
+layout: socials
+---
+<Autoplay :seconds="10" :enabled="true" />
+<Logo />
+---
 src: ./pages/shared.md#6-7
 ---
 THIS CONTENT IS IGNORED
