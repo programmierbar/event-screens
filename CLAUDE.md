@@ -4,13 +4,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a [Slidev](https://sli.dev/) presentation project for programmierbar event screens — a looping slide deck displayed at meetup events. Slidev is a Markdown-based slide framework powered by Vue 3 and Vite. The package manager is **pnpm**.
+This is a [Slidev](https://sli.dev/) presentation project for programmierbar event screens — a looping slide deck displayed at meetup events. Slidev is a Markdown-based slide framework powered by Vue 3 and Vite. The package manager is **npm**.
 
 ## Commands
 
-- **Dev server:** `pnpm dev` (opens browser, serves at http://localhost:3030)
-- **Build:** `pnpm build` (outputs to `dist/`)
-- **Export to PDF:** `pnpm export`
+- **Dev server:** `npm dev` (opens slide selection, then a browser, serves at http://localhost:3030)
+- **Build:** `npm build` (outputs to `dist/`)
+- **Export to PDF:** `npm export`
 
 ## Architecture
 
