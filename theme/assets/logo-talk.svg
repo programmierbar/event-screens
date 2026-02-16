@@ -1,0 +1,8 @@
+<svg width="256" height="256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M116.5 140.5H62.8099C57.1222 140.5 51.6193 142.52 47.2824 146.2L39.147 153.103C38.4973 153.654 37.5 153.192 37.5 152.34V103C37.5 80.9086 55.4086 63 77.5 63H111.5C133.591 63 151.5 80.9086 151.5 103V110.5" stroke="white" stroke-width="7" stroke-linecap="round"/>
+<path d="M218 191.936V147.789C218 128.023 201.977 112 182.211 112H150.671C131.523 112 116 127.523 116 146.671C116 165.819 131.523 181.342 150.671 181.342H195.354C200.443 181.342 205.367 183.149 209.247 186.442L216.526 192.618C217.108 193.111 218 192.698 218 191.936Z" stroke="#CFFF00" stroke-width="7" stroke-linecap="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M185.186 137.137C190.698 143.716 184.081 154.594 169.486 164.135C169.286 164.266 168.924 164.266 168.756 164.135C153.88 154.508 147.415 143.774 152.975 137.137C157.661 131.399 165.765 135.724 169.055 138.968C172.634 135.508 179.878 130.769 185.186 137.137Z" stroke="#CFFF00" stroke-width="7"/>
+<path d="M102 87L84.5 119.5" stroke="white" stroke-width="7" stroke-linecap="square"/>
+<path d="M75.5 91.5L57.5 101.5L75.5 112.5" stroke="white" stroke-width="7" stroke-linecap="square" stroke-linejoin="bevel"/>
+<path d="M112 91.5L130 101.5L112 112.5" stroke="white" stroke-width="7" stroke-linecap="square" stroke-linejoin="bevel"/>
+</svg>
