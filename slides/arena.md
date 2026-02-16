@@ -1,5 +1,5 @@
 ---
-theme: ./theme
+theme: ./../theme
 title: programmier.bar Event Slides
 transition: fade-out
 # enable MDC Syntax: https://sli.dev/features/mdc
@@ -67,7 +67,7 @@ clicksStart: 1
 <h1>Sei Teil unserer stetigen Verbesserung!</h1>
 <p>Schenk uns eine Minute für <span v-mark="{ at: 1, color: '#cfff00', type: 'underline', strokeWidth: 5 }">Feedback:</span></p>
 
-<img src="/assets/feedback-qr.svg" width="200pt" />
+<img :src="'/assets/feedback-qr.svg'" width="200pt" />
 
 <Logo />
 <Autoplay :seconds="10" :enabled="true" />
