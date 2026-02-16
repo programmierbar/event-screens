@@ -17,7 +17,7 @@ const schedules: Schedule[] = [
         arriving: '21:25',
       },
       {
-        departing: '20:41',
+        departing: '21:41',
         arriving: '22:07',
       },
       {
@@ -30,7 +30,7 @@ const schedules: Schedule[] = [
     to: 'Gießen',
     connections: [
       {
-        departing: '21:03',
+        departing: '21:02',
         arriving: '21:26',
       },
       {
