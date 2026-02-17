@@ -22,6 +22,10 @@ layout: podcast-covers
 ---
 <Autoplay :seconds="10" :enabled="false" />
 ---
+layout: podcast-reviews
+---
+<Autoplay :seconds="10" :enabled="false" />
+---
 src: ./pages/last-events.md
 ---
 THIS CONTENT IS IGNORED
