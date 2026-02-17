@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onSlideEnter, useNav } from '@slidev/client'
+import {onSlideEnter, onSlideLeave, useNav} from '@slidev/client'
 
 const nav = useNav()
 
@@ -14,15 +14,21 @@ const props = defineProps({
   },
 })
 
+let autplayTimer = null;
+
 onSlideEnter(() => {
   if (props.enabled !== true) return;
-  setTimeout(() => {
+  autplayTimer = setTimeout(() => {
     if (nav.hasNext.value) {
-      nav.next()
+      nav.nextSlide()
     } else {
       nav.goFirst()
     }
   }, props.seconds * 1000)
+})
+
+onSlideLeave(() => {
+  clearTimeout(autplayTimer)
 })
 </script>
 

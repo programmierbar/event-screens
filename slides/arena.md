@@ -7,10 +7,35 @@ mdc: true
 
 layout: title
 ---
-<!-- FIRST SLIDE CANNOT BE SHARED AND AS TO BE RE-CREATED MANUALLY -->
 <Logo />
 <Autoplay :seconds="10" :enabled="true" />
+
 ---
-src: ./pages/shared.md#2-7
+src: ./pages/cover.md
+---
+THIS CONTENT IS IGNORED
+
+---
+src: ./pages/agenda.md
+---
+THIS CONTENT IS IGNORED
+
+---
+src: ./pages/mission.md
+---
+THIS CONTENT IS IGNORED
+
+---
+src: ./pages/quoted.md
+---
+THIS CONTENT IS IGNORED
+
+---
+src: ./pages/feedback.md
+---
+THIS CONTENT IS IGNORED
+
+---
+src: ./pages/transit.md
 ---
 THIS CONTENT IS IGNORED

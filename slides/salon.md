@@ -9,23 +9,27 @@ layout: title-icons
 titleVariant: podcast
 
 ---
-<!-- FIRST SLIDE CANNOT BE SHARED AND AS TO BE RE-CREATED MANUALLY -->
 <Logo />
-<Autoplay :seconds="10" :enabled="false" />
+<Autoplay :seconds="10" :enabled="true" />
+
 ---
 layout: podcast-feeds
 ---
 <Logo />
-<Autoplay :seconds="10" :enabled="false" />
+<Autoplay :seconds="10" :enabled="true" />
+
 ---
 layout: podcast-covers
 ---
-<Autoplay :seconds="10" :enabled="false" />
+<Autoplay :seconds="10" :enabled="true" />
+
 ---
 layout: podcast-reviews
 ---
-<Autoplay :seconds="10" :enabled="false" />
+<Logo />
+<Autoplay :seconds="10" :enabled="true" />
+
 ---
-src: ./pages/last-events.md
+src: pages/feedback.md
 ---
-THIS CONTENT IS IGNORED
+THIS CONTENT WILL BE OVERWRITEN BY IMPORTED SLIDE

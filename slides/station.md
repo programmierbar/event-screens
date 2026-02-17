@@ -6,11 +6,18 @@ transition: fade-out
 mdc: true
 
 layout: title-icons
+titleVariant: meetup
+
 ---
-<!-- FIRST SLIDE CANNOT BE SHARED AND AS TO BE RE-CREATED MANUALLY -->
 <Logo />
 <Autoplay :seconds="10" :enabled="true" />
+
 ---
 src: ./pages/last-events.md
+---
+THIS CONTENT IS IGNORED
+
+---
+src: ./pages/feedback.md
 ---
 THIS CONTENT IS IGNORED

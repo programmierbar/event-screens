@@ -33,8 +33,7 @@ onMounted(() => {
     setTimeout(() => {
       slot.current = slot.next!
       slot.next = null
-      slot.transitioning = false
-    }, TRANSITION_MS)
+    }, TRANSITION_MS+100)
   }, COVER_POPUP_INTERVAL)
 })
 

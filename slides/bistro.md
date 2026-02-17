@@ -7,23 +7,46 @@ mdc: true
 
 layout: title
 ---
-<!-- FIRST SLIDE CANNOT BE SHARED AND AS TO BE RE-CREATED MANUALLY -->
 <Logo />
 <Autoplay :seconds="10" :enabled="true" />
+
 ---
-src: ./pages/shared.md#2-5
+src: ./pages/cover.md
 ---
 THIS CONTENT IS IGNORED
+
+---
+src: ./pages/agenda.md
+---
+THIS CONTENT IS IGNORED
+
+---
+src: ./pages/mission.md
+---
+THIS CONTENT IS IGNORED
+
+---
+src: ./pages/quoted.md
+---
+THIS CONTENT IS IGNORED
+
 ---
 src: ./pages/last-events.md
 ---
 THIS CONTENT IS IGNORED
+
+---
+src: ./pages/feedback.md
+---
+THIS CONTENT IS IGNORED
+
 ---
 layout: socials
 ---
 <Autoplay :seconds="10" :enabled="true" />
 <Logo />
+
 ---
-src: ./pages/shared.md#6-7
+src: ./pages/transit.md
 ---
 THIS CONTENT IS IGNORED
