@@ -8,9 +8,19 @@ mdc: true
 layout: title-icons
 titleVariant: podcast
 
+clicks: 2
+
+---
+<BackgroundAudio />
+<Logo />
+
+---
+layout: title-icons
+titleVariant: podcast
 ---
 <Logo />
 <Autoplay :seconds="10" :enabled="true" />
+
 
 ---
 layout: podcast-feeds
@@ -24,12 +34,12 @@ layout: podcast-covers
 <Autoplay :seconds="10" :enabled="true" />
 
 ---
-layout: podcast-reviews
----
-<Logo />
-<Autoplay :seconds="10" :enabled="true" />
-
----
 src: pages/feedback.md
 ---
 THIS CONTENT WILL BE OVERWRITEN BY IMPORTED SLIDE
+
+---
+layout: podcast-reviews
+---
+<Logo />
+<Autoplay :seconds="10" :enabled="true" :restart-at="2"/>

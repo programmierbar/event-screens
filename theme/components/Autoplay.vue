@@ -12,6 +12,10 @@ const props = defineProps({
     type: Boolean,
     default: true,
   },
+  restartAt: {
+    type: Number,
+    default: 1,
+  },
 })
 
 let autplayTimer = null;
@@ -22,7 +26,7 @@ onSlideEnter(() => {
     if (nav.hasNext.value) {
       nav.nextSlide()
     } else {
-      nav.goFirst()
+      nav.go(props.restartAt)
     }
   }, props.seconds * 1000)
 })
