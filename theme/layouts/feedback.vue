@@ -24,6 +24,7 @@
   font-style: italic;
   font-weight: 600;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 .center {

@@ -35,6 +35,7 @@ defineProps({
 
 .slidev-layout .logo {
   width: 45%;
+  margin-bottom: 1.5rem;
 }
 
 .icons {

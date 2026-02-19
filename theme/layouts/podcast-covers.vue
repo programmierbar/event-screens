@@ -14,7 +14,7 @@ const slots = ref<CoverSlot[]>(
 )
 
 const TRANSITION_MS = 1000
-const COVER_POPUP_INTERVAL = 2500
+const COVER_POPUP_INTERVAL = 1000
 
 let interval: ReturnType<typeof setInterval> | null = null
 
