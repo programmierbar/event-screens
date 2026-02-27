@@ -1,6 +1,10 @@
 <script setup lang="ts">
 const meetups = [
   {
+    title: 'Your UI is dead. Make it alive!',
+    subtitle: 'Sven Szota & Julian Müller'
+  },
+  {
     title: 'Headless Apps in Rust',
     subtitle: 'Marcel Koch'
   },
@@ -51,7 +55,7 @@ const meetups = [
       <div class="content">
         <h1>Letzte Meetups</h1>
         <ul>
-          <li v-for="meetup in meetups" :key="meetup.title">
+          <li v-for="meetup in meetups.slice(0,9) " :key="meetup.title">
             <span class="title">{{ meetup.title }}</span>
             <span class="subtitle">{{ meetup.subtitle }}</span>
           </li>
