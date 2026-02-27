@@ -36,6 +36,11 @@ src: ./pages/programmiercon.md
 THIS CONTENT IS IGNORED
 
 ---
+src: ./pages/speedtesting.md
+---
+THIS CONTENT IS IGNORED
+
+---
 src: ./pages/last-events.md
 ---
 THIS CONTENT IS IGNORED

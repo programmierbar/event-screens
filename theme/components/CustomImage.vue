@@ -43,6 +43,7 @@ const resolvedUrl = computed(() => {
 
 <style scoped>
 .taped {
+  display: inline-block;
   position: relative;
   rotate: 5deg;
 }
