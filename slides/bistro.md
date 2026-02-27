@@ -46,6 +46,11 @@ src: ./pages/last-events.md
 THIS CONTENT IS IGNORED
 
 ---
+src: ./pages/next-meetup.md
+---
+THIS CONTENT IS IGNORED
+
+---
 src: ./pages/feedback.md
 ---
 THIS CONTENT IS IGNORED

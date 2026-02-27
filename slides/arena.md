@@ -31,6 +31,11 @@ src: ./pages/quoted.md
 THIS CONTENT IS IGNORED
 
 ---
+src: ./pages/next-meetup.md
+---
+THIS CONTENT IS IGNORED
+
+---
 src: ./pages/programmiercon.md
 ---
 THIS CONTENT IS IGNORED
