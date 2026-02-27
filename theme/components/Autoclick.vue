@@ -15,10 +15,10 @@ let timers = [];
 onSlideEnter(() => {
   props.clicks.forEach((click: number) => {
     console.log(`Clicking in ${click}ms`)
-    setTimeout(() => {
+    timers.push(setTimeout(() => {
       console.log(`Clicking...`)
       nav.next();
-    }, click)
+    }, click))
   })
 })
 
