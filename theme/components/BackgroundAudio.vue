@@ -1,9 +1,18 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import {computed, onMounted, ref} from 'vue'
 import { useNav } from "@slidev/client";
 
 const nav = useNav()
 const audio = ref<HTMLAudioElement>()
+
+const audioUrl = '/assets/news_intro.mp3';
+
+const resolvedUrl = computed(() => {
+  if (audioUrl)
+    return import.meta.env.BASE_URL + audioUrl.slice(1)
+
+  return audioUrl
+})
 
 onMounted(() => {
   audio.value?.play().catch(() => {
@@ -22,5 +31,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <audio ref="audio" src="/assets/news_intro.mp3" autoplay />
+  <audio ref="audio" :src="resolvedUrl" autoplay />
 </template>
