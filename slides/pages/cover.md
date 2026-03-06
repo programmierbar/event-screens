@@ -5,4 +5,4 @@ imageUrl: '/assets/meetup-cover.jpg'
 ---
 
 <!-- content is set in YAML -->
-<Autoplay :seconds="10" :enabled="true" />
+<Autoplay :seconds="60" :enabled="true" />
