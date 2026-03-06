@@ -28,9 +28,14 @@ onMounted(() => {
 
     slot.next = newCover
     await nextTick()
-    slot.transitioning = true
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        slot.transitioning = true
+      })
+    })
 
     setTimeout(() => {
+      slot.transitioning = false
       slot.current = slot.next!
       slot.next = null
     }, TRANSITION_MS+100)
@@ -106,7 +111,7 @@ h1 {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: opacity 1s ease;
+  transition: opacity 1s ease-in-out;
 }
 
 .cover-grid-item :deep(.cover-next.cover-visible) {
