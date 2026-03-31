@@ -26,6 +26,8 @@ jobs:
 
       - run: deno install
 
+      - run: deno task update-data
+
       - run: deno task build --base /event-screens/
 
       - uses: actions/upload-pages-artifact@v3
