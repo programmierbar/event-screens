@@ -6,7 +6,8 @@
     "build": "./build.sh",
     "dev": "tsx scripts/picker.ts",
     "export": "slidev export",
-    "fetch-covers": "tsx scripts/fetch_covers.ts"
+    "fetch-covers": "tsx scripts/fetch_covers.ts",
+    "update-data": "tsx scripts/update_data.ts"
   },
   "dependencies": {
     "@slidev/cli": "^52.12.0",

@@ -1,7 +1,7 @@
 ---
 layout: cover
 # Props from layout component
-imageUrl: '/assets/meetup-cover.jpg'
+meetup: 'current'
 ---
 
 <!-- content is set in YAML -->
