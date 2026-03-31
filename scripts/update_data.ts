@@ -7,7 +7,8 @@ import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 
 const CMS_BASE = "https://admin.programmier.bar";
-const MEETUPS_URL = `${CMS_BASE}/items/meetups?sort=start_on&filter[start_on][_gte]=$NOW&limit=2&fields=cover_image,start_on,talks.talk.title,talks.talk.speakers.speaker.*`;
+const MEETUPS_URL = `${CMS_BASE}/items/meetups?sort=start_on&filter[start_on][_gte]=$NOW&limit=2&fields=cover_image,start_on,title,speakers.speaker.first_name,speakers.speaker.last_name,members.member.first_name,members.member.last_name,talks.talk.title,talks.talk.speakers.speaker.*`;
+const PAST_MEETUPS_URL = `${CMS_BASE}/items/meetups?sort=-start_on&filter[start_on][_lt]=$NOW&limit=9&fields=title,speakers.speaker.first_name,speakers.speaker.last_name,members.member.first_name,members.member.last_name`;
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dataPath = join(__dirname, "..", "data.json");
@@ -27,11 +28,20 @@ interface MeetupTalk {
 interface MeetupItem {
     cover_image: string | null;
     start_on: string;
+    title: string;
+    speakers: { speaker: Speaker }[];
+    members: { member: Speaker }[];
     talks: MeetupTalk[];
 }
 
-interface DirectusResponse {
-    data: MeetupItem[];
+interface PastMeetupItem {
+    title: string;
+    speakers: { speaker: Speaker }[];
+    members: { member: Speaker }[];
+}
+
+interface DirectusResponse<T = MeetupItem> {
+    data: T[];
 }
 
 // Updating the poster URLs at "posters.currentUrl" and "posters.nextUrl" in the JSON file
@@ -46,7 +56,26 @@ async function fetchUpcomingMeetups(): Promise<MeetupItem[]> {
   if (!response.ok) {
     throw new Error(`Failed to fetch meetups: ${response.status} ${response.statusText}`);
   }
-  const json: DirectusResponse = await response.json();
+  const json: DirectusResponse<MeetupItem> = await response.json();
+  return json.data;
+}
+
+// Updating the list of past meetups at "lastEvents[]" in the JSON file
+// Each last event has a `title` and a `subtitle` field in the JSON file
+// We can query the past 10 meetups from the CMS API.
+// For the `title` of the past events, we can use the `title` property of the meetups in the CMS.
+// For the `subtitle` we list all speaker(s) of the meetup (when more than one, concatted with " & ")
+// The speakers' detail can be found in the `speakers.speaker.first_name` and `speakers.speaker.last_name` fields
+// of the meetup in the CMS.
+// A meetup could also have its speakers listed in the members field at `members.member.*` with the name being in
+// `members.member.first_name` and `members.member.last_name` fields of the meetup in the CMS.
+// Be aware that a meetup could have multiple speakers or members
+async function fetchPastMeetups(): Promise<PastMeetupItem[]> {
+  const response = await fetch(PAST_MEETUPS_URL);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch past meetups: ${response.status} ${response.statusText}`);
+  }
+  const json: DirectusResponse<PastMeetupItem> = await response.json();
   return json.data;
 }
 
@@ -85,11 +114,36 @@ async function main() {
     }));
   }
 
+  // Update last events: current meetup + past meetups (10 total)
+  const pastMeetups = await fetchPastMeetups();
+  const formatNames = (
+    speakers: { speaker: Speaker }[],
+    members: { member: Speaker }[],
+  ) => [
+    ...speakers.map((s) => `${s.speaker.first_name} ${s.speaker.last_name}`),
+    ...members.map((m) => `${m.member.first_name} ${m.member.last_name}`),
+  ].join(" & ");
+
+  const pastEvents = pastMeetups.map((m) => ({
+    title: m.title,
+    subtitle: formatNames(m.speakers, m.members),
+  }));
+
+  if (current) {
+    data.lastEvents = [
+      { title: current.title, subtitle: formatNames(current.speakers, current.members) },
+      ...pastEvents,
+    ];
+  } else {
+    data.lastEvents = pastEvents;
+  }
+
   writeFileSync(dataPath, JSON.stringify(data, null, 2) + "\n");
-  console.log("Updated data.json posters:");
+  console.log("Updated data.json:");
   console.log("  currentUrl:", data.posters.currentUrl);
   console.log("  nextUrl:", data.posters.nextUrl);
   console.log("  talks:", JSON.stringify(data.agenda.talks));
+  console.log("  lastEvents:", data.lastEvents, "items");
 }
 
 main().catch((err) => {

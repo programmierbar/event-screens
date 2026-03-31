@@ -68,44 +68,44 @@
   ],
   "lastEvents": [
     {
-      "title": "Your UI is dead. Make it alive!",
+      "title": "(K)einen Mehrwert durch Agentic Coding?",
+      "subtitle": "Julia Kordick"
+    },
+    {
+      "title": "Micro Interactions in Production",
       "subtitle": "Sven Szota & Julian Müller"
     },
     {
-      "title": "Headless Apps in Rust",
-      "subtitle": "Marcel Koch"
+      "title": "Headless Apps",
+      "subtitle": "Marcel Koch & Maik Mursall"
     },
     {
       "title": "Security in Games",
-      "subtitle": "Philip Klostermeyer"
+      "subtitle": "Philip Klostermeyer & Elliot Kovanda"
     },
     {
-      "title": "AI und künstliche Stimmerzeugung",
+      "title": "KI-Stimmen für eure Software-Projekte",
       "subtitle": "Thorsten Müller"
     },
     {
-      "title": "Signals in Depth",
+      "title": "Hörer:innen Treffen in Berlin",
+      "subtitle": "Dennis Becker & Garrelt Mock & Dave Koschitzki"
+    },
+    {
+      "title": "programmier.BBQ: Signals in Depth",
       "subtitle": "Garrelt Mock"
     },
     {
-      "title": "The Thinking Game",
-      "subtitle": "programmier.bar Kino"
+      "title": "programmier.bar Kino: The Thinking Game",
+      "subtitle": ""
     },
     {
-      "title": "Gamification in der Wissenschaft",
-      "subtitle": "Prof. Stephan Jacob"
+      "title": "Gamification in der Wissenschaft: Wie spiele bei der Mondlandung helfen können",
+      "subtitle": "Stephan Jacob"
     },
     {
-      "title": "Von Security und Weltverbesser:innen",
-      "subtitle": "Georg Dresler, Aurelius Lie & Xenija Neufeld"
-    },
-    {
-      "title": "Data in Games",
-      "subtitle": "Rafet Sifa & Wessel van de Goor"
-    },
-    {
-      "title": "Svelte 5 & 3D-Entwicklung …",
-      "subtitle": "Simon Holthausen, Grischa Erbe & Jona Kukatzki"
+      "title": "Von Security und Weltverbesser:innen - KI Sicher und sinnvoll nutzen",
+      "subtitle": "Georg Dresler & Xenija Neufeld & Aurelius Lie"
     }
   ]
 }
