@@ -1,0 +1,111 @@
+{
+  "posters": {
+    "currentUrl": "https://admin.programmier.bar/assets/92b6e4b2-6e6c-41a8-bafd-39040c4f4184",
+    "nextUrl": null
+  },
+  "agenda": {
+    "schedule": [
+      {
+        "time": "18:00",
+        "title": "Ankunft & Einlass"
+      },
+      {
+        "time": "18:30",
+        "title": "programmier.bar-Tour (Start: Halle)"
+      },
+      {
+        "time": "ca. 19:00",
+        "title": "",
+        "isTalks": true
+      },
+      {
+        "time": "ab 20:30",
+        "title": "Get together & Austausch"
+      }
+    ],
+    "talks": [
+      {
+        "title": "(K)einen Mehrwert durch Agentic Coding? – Wo Agentic AI im Software Development Lifecycle wirklich hilft (und wo nicht)",
+        "speaker": "Julia Kordick"
+      }
+    ]
+  },
+  "transit": [
+    {
+      "to": "Frankfurt",
+      "connections": [
+        {
+          "departing": "20:57",
+          "arriving": "21:25"
+        },
+        {
+          "departing": "21:41",
+          "arriving": "22:07"
+        },
+        {
+          "departing": "21:57",
+          "arriving": "22:25"
+        }
+      ]
+    },
+    {
+      "to": "Gießen",
+      "connections": [
+        {
+          "departing": "21:02",
+          "arriving": "21:26"
+        },
+        {
+          "departing": "21:18",
+          "arriving": "21:34"
+        },
+        {
+          "departing": "22:03",
+          "arriving": "22:26"
+        }
+      ]
+    }
+  ],
+  "lastEvents": [
+    {
+      "title": "(K)einen Mehrwert durch Agentic Coding?",
+      "subtitle": "Julia Kordick"
+    },
+    {
+      "title": "Micro Interactions in Production",
+      "subtitle": "Sven Szota & Julian Müller"
+    },
+    {
+      "title": "Headless Apps",
+      "subtitle": "Marcel Koch & Maik Mursall"
+    },
+    {
+      "title": "Security in Games",
+      "subtitle": "Philip Klostermeyer & Elliot Kovanda"
+    },
+    {
+      "title": "KI-Stimmen für eure Software-Projekte",
+      "subtitle": "Thorsten Müller"
+    },
+    {
+      "title": "Hörer:innen Treffen in Berlin",
+      "subtitle": "Dennis Becker & Garrelt Mock & Dave Koschitzki"
+    },
+    {
+      "title": "programmier.BBQ: Signals in Depth",
+      "subtitle": "Garrelt Mock"
+    },
+    {
+      "title": "programmier.bar Kino: The Thinking Game",
+      "subtitle": ""
+    },
+    {
+      "title": "Gamification in der Wissenschaft: Wie spiele bei der Mondlandung helfen können",
+      "subtitle": "Stephan Jacob"
+    },
+    {
+      "title": "Von Security und Weltverbesser:innen - KI Sicher und sinnvoll nutzen",
+      "subtitle": "Georg Dresler & Xenija Neufeld & Aurelius Lie"
+    }
+  ]
+}
