@@ -15,8 +15,8 @@ import CustomImage from "../components/CustomImage.vue";
         <slot name="person" />
       </div>
     </div>
+    <slot/>
   </div>
-  <slot/>
 </template>
 
 <style scoped>
