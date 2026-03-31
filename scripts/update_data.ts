@@ -2,9 +2,9 @@
 // For this it loads data from our CMS api which is available at `https://admin.programmier.bar`
 // [The API is powered by Directus CMS](https://directus.io/docs/api).
 
-import { readFileSync, writeFileSync } from "fs";
-import { join, dirname } from "path";
-import { fileURLToPath } from "url";
+import { readFileSync, writeFileSync } from "node:fs";
+import { join, dirname } from "node:path";
+import { fileURLToPath } from "node:url";
 
 const CMS_BASE = "https://admin.programmier.bar";
 const MEETUPS_URL = `${CMS_BASE}/items/meetups?sort=start_on&filter[start_on][_gte]=$NOW&limit=2&fields=cover_image,start_on,title,speakers.speaker.first_name,speakers.speaker.last_name,members.member.first_name,members.member.last_name,talks.talk.title,talks.talk.speakers.speaker.*`;
