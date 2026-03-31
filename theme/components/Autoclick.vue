@@ -1,24 +1,21 @@
 <script setup lang="ts">
-import {onSlideEnter, onSlideLeave, useNav} from '@slidev/client'
+import { onSlideEnter, onSlideLeave, useNav } from '@slidev/client'
 
 const nav = useNav()
 
-const props = defineProps({
-  clicks: {
-    type: Array,
-    default: [100],
-  }
-})
+const { seconds = [1] } = defineProps<{
+  seconds: number[]
+}>()
 
-let timers = [];
+let timers: ReturnType<typeof setTimeout>[] = [];
 
 onSlideEnter(() => {
-  props.clicks.forEach((click: number) => {
-    console.log(`Clicking in ${click}ms`)
+  seconds.forEach((timeOutSeconds: number) => {
+    console.log(`Clicking in ${timeOutSeconds}s`)
     timers.push(setTimeout(() => {
-      console.log(`Clicking...`)
+      console.log(`Clicking after ${timeOutSeconds}ms`)
       nav.next();
-    }, click))
+    }, timeOutSeconds * 1000))
   })
 })
 
