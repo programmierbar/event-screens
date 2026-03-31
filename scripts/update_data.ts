@@ -7,14 +7,27 @@ import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 
 const CMS_BASE = "https://admin.programmier.bar";
-const MEETUPS_URL = `${CMS_BASE}/items/meetups?sort=start_on&filter[start_on][_gte]=$NOW&limit=2&fields=cover_image,start_on`;
+const MEETUPS_URL = `${CMS_BASE}/items/meetups?sort=start_on&filter[start_on][_gte]=$NOW&limit=2&fields=cover_image,start_on,talks.talk.title,talks.talk.speakers.speaker.*`;
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dataPath = join(__dirname, "..", "data.json");
 
+interface Speaker {
+    first_name: string;
+    last_name: string;
+}
+
+interface MeetupTalk {
+    talk: {
+        title: string;
+        speakers: { speaker: Speaker }[];
+    };
+}
+
 interface MeetupItem {
     cover_image: string | null;
-    start_at: string;
+    start_on: string;
+    talks: MeetupTalk[];
 }
 
 interface DirectusResponse {
@@ -57,10 +70,26 @@ async function main() {
 
   data.posters.nextUrl = next?.cover_image ? assetUrl(next.cover_image) : null;
 
+  // Updating the talks at "agenda.talks[]" in the JSON file
+  // Each talk has a `title` and a `speaker` field
+  // The talk(s) of the current meetup can be found at the fields
+  // `talks.talk.title` and
+  // `talks.talk.speakers.speaker.first_name` and `talks.talk.speakers.speaker.last_name`
+  // Be aware that a meetup could have multiple talks and each talk could have multiple speakers
+  if (current?.talks) {
+    data.agenda.talks = current.talks.map((t) => ({
+      title: t.talk.title,
+      speaker: t.talk.speakers
+        .map((s) => `${s.speaker.first_name} ${s.speaker.last_name}`)
+        .join(" & "),
+    }));
+  }
+
   writeFileSync(dataPath, JSON.stringify(data, null, 2) + "\n");
   console.log("Updated data.json posters:");
   console.log("  currentUrl:", data.posters.currentUrl);
   console.log("  nextUrl:", data.posters.nextUrl);
+  console.log("  talks:", JSON.stringify(data.agenda.talks));
 }
 
 main().catch((err) => {

@@ -1,7 +1,7 @@
 {
   "posters": {
-    "currentUrl" : "https://admin.programmier.bar/assets/5bb7e0ec-c703-4fb3-8923-2c773e59308e",
-    "nextUrl" : "https://admin.programmier.bar/assets/92b6e4b2-6e6c-41a8-bafd-39040c4f4184"
+    "currentUrl": "https://admin.programmier.bar/assets/92b6e4b2-6e6c-41a8-bafd-39040c4f4184",
+    "nextUrl": null
   },
   "agenda": {
     "schedule": [
@@ -25,8 +25,8 @@
     ],
     "talks": [
       {
-        "title": "Your UI is dead. Make it alive!",
-        "speaker": "Sven Szota & Julian Müller"
+        "title": "(K)einen Mehrwert durch Agentic Coding? – Wo Agentic AI im Software Development Lifecycle wirklich hilft (und wo nicht)",
+        "speaker": "Julia Kordick"
       }
     ]
   },
