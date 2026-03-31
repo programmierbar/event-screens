@@ -1,7 +1,8 @@
 ---
 layout: cover
 
-imageUrl: /assets/next-meetup.png
+meetup: 'next'
+fallbackImageUrl: /assets/fallback_next_meetup.png
 disabled: false
 ---
 

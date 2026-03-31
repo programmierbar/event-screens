@@ -1,13 +1,23 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import {urlResolver} from "../util/urlResolver";
+import dataProvider from "../util/dataProvider";
 
 const props = defineProps({
-  imageUrl: { type: String, default: '' },
+  meetup: { type: String, default: '', required: true },
+  fallbackImageUrl: { type: String, default: '' },
 })
 
 const resolvedUrl = computed(() => {
-  return urlResolver(props.imageUrl)
+  if (props.meetup === 'current') {
+    return urlResolver(dataProvider.getData().posters.currentUrl || props.fallbackImageUrl)
+  }
+
+  if (props.meetup === 'next') {
+    return urlResolver(dataProvider.getData().posters.nextUrl || props.fallbackImageUrl)
+  }
+
+  throw new Error(`Unknown meetup: ${props.meetup}`)
 })
 </script>
 

@@ -26,11 +26,16 @@ export interface Transit {
   connections: Connection[];
 }
 
+export interface Posters {
+  currentUrl: string;
+  nextUrl?: string;
+}
+
 export interface Data {
+  posters: Posters;
   agenda: Agenda;
   transit: Transit[];
 }
-
 
 export default {
     getData(): Data {
