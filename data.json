@@ -1,4 +1,31 @@
 {
+  "agenda": {
+    "schedule": [
+      {
+        "time": "18:00",
+        "title": "Ankunft & Einlass"
+      },
+      {
+        "time": "18:30",
+        "title": "programmier.bar-Tour (Start: Halle)"
+      },
+      {
+        "time": "ca. 19:00",
+        "title": "",
+        "isTalks": true
+      },
+      {
+        "time": "ab 20:30",
+        "title": "Get together & Austausch"
+      }
+    ],
+    "talks": [
+      {
+        "title": "Your UI is dead. Make it alive!",
+        "speaker": "Sven Szota & Julian Müller"
+      }
+    ]
+  },
   "transit": [
     {
       "to": "Frankfurt",

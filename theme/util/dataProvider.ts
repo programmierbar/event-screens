@@ -1,5 +1,21 @@
 import rawData from './../../data.json'
 
+export interface ScheduleItem {
+  time: string;
+  title: string;
+  isTalks?: boolean;
+}
+
+export interface Talk {
+  title: string;
+  speaker: string;
+}
+
+export interface Agenda {
+  schedule: ScheduleItem[];
+  talks: Talk[];
+}
+
 export interface Connection {
   departing: string;
   arriving: string;
@@ -11,6 +27,7 @@ export interface Transit {
 }
 
 export interface Data {
+  agenda: Agenda;
   transit: Transit[];
 }
 
