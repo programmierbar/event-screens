@@ -31,10 +31,16 @@ export interface Posters {
   nextUrl?: string;
 }
 
+export interface LastEventsItem {
+  title: string;
+  subtitle: string;
+}
+
 export interface Data {
   posters: Posters;
   agenda: Agenda;
   transit: Transit[];
+  lastEvents: LastEventsItem[];
 }
 
 export default {

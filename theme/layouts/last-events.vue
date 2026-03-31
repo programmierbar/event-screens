@@ -1,47 +1,6 @@
 <script setup lang="ts">
-const meetups = [
-  {
-    title: 'Your UI is dead. Make it alive!',
-    subtitle: 'Sven Szota & Julian Müller'
-  },
-  {
-    title: 'Headless Apps in Rust',
-    subtitle: 'Marcel Koch'
-  },
-  {
-    title: 'Security in Games',
-    subtitle: 'Philip Klostermeyer'
-  },
-  {
-    title: 'AI und künstliche Stimmerzeugung',
-    subtitle: 'Thorsten Müller'
-  },
-  {
-    title: 'Signals in Depth',
-    subtitle: 'Garrelt Mock'
-  },
-  {
-    title: 'The Thinking Game',
-    subtitle: 'programmier.bar Kino'
-  },
-  {
-    title: 'Gamification in der Wissenschaft',
-    subtitle: 'Prof. Stephan Jacob'
-  },
-  {
-    title: 'Von Security und Weltverbesser:innen',
-    subtitle: 'Georg Dresler, Aurelius Lie & Xenija Neufeld'
-  },
-  {
-    title: 'Data in Games',
-    subtitle: 'Rafet Sifa & Wessel van de Goor'
-  },
-  {
-    title: 'Svelte 5 & 3D-Entwicklung …',
-    subtitle: 'Simon Holthausen, Grischa Erbe & Jona Kukatzki'
-  }
-]
-
+import dataProvider from "../util/dataProvider";
+const meetups = dataProvider.getData().lastEvents;
 </script>
 
 <template>
