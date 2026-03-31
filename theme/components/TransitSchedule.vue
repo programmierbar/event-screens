@@ -1,50 +1,7 @@
 <script setup lang="ts">
+import dataProvider from "../util/dataProvider";
 
-interface Schedule {
-  to: string;
-  connections: {
-    departing: string,
-    arriving: string,
-  }[];
-}
-
-const schedules: Schedule[] = [
-  {
-    to: 'Frankfurt',
-    connections: [
-      {
-        departing: '20:57',
-        arriving: '21:25',
-      },
-      {
-        departing: '21:41',
-        arriving: '22:07',
-      },
-      {
-        departing: '21:57',
-        arriving: '22:25',
-      },
-    ]
-  },
-  {
-    to: 'Gießen',
-    connections: [
-      {
-        departing: '21:02',
-        arriving: '21:26',
-      },
-      {
-        departing: '21:18',
-        arriving: '21:34',
-      },
-      {
-        departing: '22:03',
-        arriving: '22:26',
-      },
-    ]
-  }
-];
-
+const schedules = dataProvider.getData().transit;
 </script>
 
 <template>
