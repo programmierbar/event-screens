@@ -17,6 +17,10 @@ const resolvedUrl = computed(() => {
     return urlResolver(dataProvider.getData().posters.nextUrl || props.fallbackImageUrl)
   }
 
+  if (props.meetup === 'none') {
+    return urlResolver(props.fallbackImageUrl)
+  }
+
   throw new Error(`Unknown meetup: ${props.meetup}`)
 })
 </script>

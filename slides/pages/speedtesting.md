@@ -1,13 +1,10 @@
 ---
-layout: speedtesting
+layout: cover
+
+meetup: 'none'
+fallbackImageUrl: /assets/speedtesting/word-search-hotel.png
+disabled: false
 ---
-
-::person::
-
-<CustomImage :src="'/assets/Garrelt.jpg'" />
-<span>Garrelt</span>
-
-::default::
 
 <Logo />
 <Autoplay :seconds="10" :enabled="true" />
