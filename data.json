@@ -1,7 +1,7 @@
 {
   "posters": {
-    "currentUrl": "https://admin.programmier.bar/assets/92b6e4b2-6e6c-41a8-bafd-39040c4f4184",
-    "nextUrl": "https://admin.programmier.bar/assets/57fd6a25-eba2-4ec7-8b37-6249441b2544"
+    "currentUrl": "https://admin.programmier.bar/assets/57fd6a25-eba2-4ec7-8b37-6249441b2544",
+    "nextUrl": null
   },
   "agenda": {
     "schedule": [
@@ -25,8 +25,8 @@
     ],
     "talks": [
       {
-        "title": "(K)einen Mehrwert durch Agentic Coding? – Wo Agentic AI im Software Development Lifecycle wirklich hilft (und wo nicht)",
-        "speaker": "Julia Kordick"
+        "title": "Level Up: Erfolg durch Barrierefreiheit & inklusives Design",
+        "speaker": "Roldon Brown"
       }
     ]
   },
@@ -68,6 +68,10 @@
   ],
   "lastEvents": [
     {
+      "title": "Level Up: Erfolg durch Barrierefreiheit & inklusives Design",
+      "subtitle": "Roldon Brown"
+    },
+    {
       "title": "(K)einen Mehrwert durch Agentic Coding?",
       "subtitle": "Julia Kordick"
     },
@@ -102,10 +106,6 @@
     {
       "title": "Gamification in der Wissenschaft: Wie spiele bei der Mondlandung helfen können",
       "subtitle": "Stephan Jacob"
-    },
-    {
-      "title": "Von Security und Weltverbesser:innen - KI Sicher und sinnvoll nutzen",
-      "subtitle": "Georg Dresler & Xenija Neufeld & Aurelius Lie"
     }
   ]
 }
