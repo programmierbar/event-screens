@@ -1,7 +1,7 @@
 {
   "posters": {
-    "currentUrl": "https://admin.programmier.bar/assets/57fd6a25-eba2-4ec7-8b37-6249441b2544",
-    "nextUrl": null
+    "currentUrl": "https://admin.programmier.bar/assets/ec83a691-abdf-418a-b199-2111b6c41038",
+    "nextUrl": "https://admin.programmier.bar/assets/01f71424-c711-41c9-8369-cbbc59d38f5c"
   },
   "agenda": {
     "schedule": [
@@ -25,8 +25,8 @@
     ],
     "talks": [
       {
-        "title": "Level Up: Erfolg durch Barrierefreiheit & inklusives Design",
-        "speaker": "Roldon Brown"
+        "title": "Pixel Perfect: Die Kunst und Wissenschaft des KI-Bild-Upscalings",
+        "speaker": "Tobias Lampert"
       }
     ]
   },
@@ -68,6 +68,14 @@
   ],
   "lastEvents": [
     {
+      "title": "programmier.BBQ: Pixel Perfect – KI-Bild-Upscaling",
+      "subtitle": "Tobias Lampert & Dennis Becker & Jan Gregor Emge-Triebel"
+    },
+    {
+      "title": "WWDC26 Watch Party",
+      "subtitle": "Jan Gregor Emge-Triebel & Dennis Becker"
+    },
+    {
       "title": "Level Up: Erfolg durch Barrierefreiheit & inklusives Design",
       "subtitle": "Roldon Brown"
     },
@@ -98,14 +106,6 @@
     {
       "title": "programmier.BBQ: Signals in Depth",
       "subtitle": "Garrelt Mock"
-    },
-    {
-      "title": "programmier.bar Kino: The Thinking Game",
-      "subtitle": ""
-    },
-    {
-      "title": "Gamification in der Wissenschaft: Wie spiele bei der Mondlandung helfen können",
-      "subtitle": "Stephan Jacob"
     }
   ]
 }
