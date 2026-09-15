@@ -2,7 +2,7 @@
 layout: announcement
 
 posterUrl: /assets/programmiercon-poster.png
-disabled: true
+disabled: false
 ---
 
 ::title::
