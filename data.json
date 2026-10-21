@@ -1,7 +1,7 @@
 {
   "posters": {
-    "currentUrl": "https://admin.programmier.bar/assets/ec83a691-abdf-418a-b199-2111b6c41038",
-    "nextUrl": "https://admin.programmier.bar/assets/01f71424-c711-41c9-8369-cbbc59d38f5c"
+    "currentUrl": "https://admin.programmier.bar/assets/01f71424-c711-41c9-8369-cbbc59d38f5c",
+    "nextUrl": null
   },
   "agenda": {
     "schedule": [
@@ -25,8 +25,8 @@
     ],
     "talks": [
       {
-        "title": "Pixel Perfect: Die Kunst und Wissenschaft des KI-Bild-Upscalings",
-        "speaker": "Tobias Lampert"
+        "title": "Hands-on aus der Ferne: vier Jahre Remote Lab MICRO",
+        "speaker": "Jakob Czekansky"
       }
     ]
   },
@@ -68,6 +68,10 @@
   ],
   "lastEvents": [
     {
+      "title": "Das MICRO Remote Lab: Embedded-Entwicklung aus der Ferne",
+      "subtitle": "Jakob Czekansky"
+    },
+    {
       "title": "programmier.BBQ: Pixel Perfect – KI-Bild-Upscaling",
       "subtitle": "Tobias Lampert"
     },
@@ -102,10 +106,6 @@
     {
       "title": "Hörer:innen Treffen in Berlin",
       "subtitle": "Dennis Becker & Garrelt Mock & Dave Koschitzki"
-    },
-    {
-      "title": "programmier.BBQ: Signals in Depth",
-      "subtitle": "Garrelt Mock"
     }
   ]
 }
